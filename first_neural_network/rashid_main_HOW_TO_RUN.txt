@@ -5,7 +5,5 @@ python rashid_main.py
 
 //
 We have changed the code so that it looks like a direct translation or the mirror image of the math equation.
-That equation is in the image we uploaded here.
-
-
+That equation is in the image we uploaded here. https://github.com/Htet-Myat-Kyaw/deep_learning/blob/main/first_neural_network/backprop_equation.jpg
 
