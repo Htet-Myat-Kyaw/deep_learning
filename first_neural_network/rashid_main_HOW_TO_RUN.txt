@@ -1,0 +1,11 @@
+SET PATH=C:\Users\<your user name>\opt\my_pythons\py383;C:\Users\<your user name>\opt\my_pythons\py383\Scripts;%PATH%
+PUSHD C:\Users\<your user name>\<PATH TO YOUR CODE>
+
+python rashid_main.py
+
+//
+We have changed the code so that it looks like a direct translation or the mirror image of the math equation.
+That equation is in the image we uploaded here.
+
+
+
