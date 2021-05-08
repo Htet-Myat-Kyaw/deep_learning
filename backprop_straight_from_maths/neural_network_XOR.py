@@ -1,12 +1,10 @@
 import numpy as np
 
-
 def sigmoid(z):
     return 1 / (1+np.exp(-z))
 
 def sigmoid_derivative(z):
     return np.exp(-z)/((1+np.exp(-z))**2)
-
 
 class Layer(object):
     def __init__(self, input_size, output_size):
@@ -34,8 +32,6 @@ class Layer(object):
            return delta_to_passbk
     
 
-
-
 def cost_function(y, y_hat):
     J = 0.5*sum((y-y_hat)**2)
     
@@ -52,10 +48,8 @@ def update_last_layer(last_layer, learning_rate):
 
     return delta_to_passbk,y_hat
 
-
-
-
-
+"""
+Shorter
 x = np.array([ [0, 1], [1, 0], [14, 10],
                [7,8], [77,8], [12,13],
                [12,3], [22,4], [67,1.90],
@@ -65,7 +59,7 @@ x = np.array([ [0, 1], [1, 0], [14, 10],
                [45,45], [34,34], [11.08,11.08]
 
                ])
-
+"""
 
 x = np.array([ [0, 1], [1, 0], [2, 0],
                [0,2], [3,8], [2,3],     [10,12], [13,18], [12,13],
@@ -78,12 +72,10 @@ x = np.array([ [0, 1], [1, 0], [2, 0],
                ])
 
 
-
 y = np.array([ [1], [1], [1],  [1], [1], [1],
                [1], [1], [1],  [1], [1], [1],
                [0], [0], [0],  [0],[0], [0],
                [0],[0], [0],   [0],[0], [0]    ])
-
 
 
 layers=[]
@@ -143,19 +135,14 @@ for i in range(num_iterations):
 low_costs=[c for c in cost if c[0] < 0.16]
 
 print(cost[:10])
-
 print("\n---------------------------\n");
-
-
 print(cost[(num_iterations-10):])
 print("\n---------------------------\n");
-
 
 if len(low_costs) > 0:
  print(cost[(num_iterations-10):])
  print()
  print(low_costs)
-
 else:
     print("Costs higher than 0.16")
 
